@@ -6,3 +6,16 @@
   width : 100%;
   margin : 20px;
 }
+.clgname{
+  width: 260px;
+  height: 17px;
+  font-family: DINPro;
+  font-size: 18.5px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.97;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--greyish-brown);
+}

@@ -5,9 +5,9 @@ import CollegeCard from './Card'
 import '../App.css';
 
 export default function Body() { 
-    const [page, setpage] = useState(0)
+    const [page, setpage] = useState(10)
     const [height, setheight] = useState(500)
-    const [collegeList, setcollegeList] = useState(colleges.slice(0,4))
+    const [collegeList, setcollegeList] = useState(colleges.slice(0,10))
     useEffect(() => {
         window.addEventListener('scroll', event => handleScroll(event), { passive: false })       
 
@@ -15,6 +15,9 @@ export default function Body() {
             window.removeEventListener('scroll', event => handleScroll(event))
         }
     },[])
+    useEffect(() => {
+        setcollegeList(colleges.splice(0,page))
+    },[height])
 
     const handleScroll = (event) => {
         if(document.documentElement.scrollTop > height){
